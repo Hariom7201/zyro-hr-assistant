@@ -51,7 +51,7 @@ def load_rag():
     )
 
     llm = ChatGoogleGenerativeAI(
-        model="gemini-2.5-flash",
+        model="gemini-1.5-flash-8b",
         temperature=0.1
     )
 
