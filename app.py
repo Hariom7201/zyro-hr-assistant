@@ -23,7 +23,7 @@ os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
 @st.cache_resource
 def load_rag():
 
-    loader = PyPDFDirectoryLoader("hr_policies")
+    loader = PyPDFDirectoryLoader("data/hr_policies")
     documents = loader.load()
 
     splitter = RecursiveCharacterTextSplitter(
