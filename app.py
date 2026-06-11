@@ -89,8 +89,8 @@ def ask_bot(question):
     return "I could not find relevant information in the HR policy documents."
     
     context = "\n\n".join(
-        doc.page_content
-        for doc in docs
+    doc.page_content[:1000]
+    for doc in docs[:5]
     )
 
     chain = (
