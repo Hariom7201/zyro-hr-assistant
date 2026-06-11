@@ -85,6 +85,9 @@ def ask_bot(question):
 
     docs = retriever.invoke(question)
 
+    if not docs:
+    return "I could not find relevant information in the HR policy documents."
+    
     context = "\n\n".join(
         doc.page_content
         for doc in docs
