@@ -128,7 +128,11 @@ if question:
     with st.chat_message("user"):
         st.write(question)
 
+    try:
     answer = ask_bot(question)
+
+except Exception as e:
+    answer = f"Error: {str(e)}"
 
     with st.chat_message("assistant"):
         st.write(answer)
